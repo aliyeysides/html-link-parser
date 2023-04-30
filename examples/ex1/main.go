@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"strings"
-  "html-link-parser/link/link"
 )
 
 var exampleHtml = `
