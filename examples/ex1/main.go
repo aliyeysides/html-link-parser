@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+  "github.com/aliyeysides/html-link-parser/link"
 )
 
 var exampleHtml = `
@@ -15,10 +16,10 @@ var exampleHtml = `
 `
 
 func main() {
- r := strings.NewReader(exampleHtml)
- links, err := link.Parse(r)
- if err != nil {
-   panic(err)
- }
- fmt.Printf("%+v\n", links)
+	r := strings.NewReader(exampleHtml)
+	links, err := link.Parse(r)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("%+v\n", links)
 }

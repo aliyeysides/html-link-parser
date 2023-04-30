@@ -1,3 +1,3 @@
-module example/ex1
+module main
 
 go 1.20
