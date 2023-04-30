@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
-  "github.com/aliyeysides/html-link-parser/link"
+  "github.com/aliyeysides/link"
 )
 
 var exampleHtml = `
