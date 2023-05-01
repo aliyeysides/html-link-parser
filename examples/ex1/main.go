@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/aliyeysides/link"
 	"strings"
-  "github.com/aliyeysides/link"
 )
 
 var exampleHtml = `
