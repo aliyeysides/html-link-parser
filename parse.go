@@ -1,6 +1,7 @@
 package link
 
 import (
+	"fmt"
 	"io"
 	"golang.org/x/net/html"
 )
@@ -17,15 +18,17 @@ func Parse(r io.Reader) ([]Link, error) {
   if err != nil {
     return nil, err
   }
-  dfs(doc)
+  dfs(doc, "")
   return nil, nil
 }
 
-func dfs(n *html.Node) {
+func dfs(n *html.Node, padding string) {
+  msg := n.Data
   if n.Type == html.ElementNode && n.Data == "a" {
-    println(n.Data)
+    msg = "<" + msg + ">\n"
   }
+  fmt.Printf(padding, n.Data)
   for c := n.FirstChild; c != nil; c = c.NextSibling {
-    dfs(c)
+    dfs(c, padding + " ")
   }
 }
